@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+        crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script>
+<script src="card.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/eggplant/jquery-ui.css" />
+ <link rel="stylesheet" href="styles.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Make a Payment</title>
+</head>
+
+<body>
+<div id="disclaimer">
+  FLYWHEEL CREDIT CARD FLOW. USE FAKE INFO. NO PROCESSING OR STORAGE.
+</div>
+
+	<div class="container" id="step-Welcome" style="display:block">
+
+  <div  class="mainConnie">
+    <h2>Pay Online</h2>
+
+    <h3>Charge: <span class="pricer">$40</span></h3>
+
+    <p>Hello! We appreciate you paying online. It'd be great to see you in-person, but this method keeps our prices LOW. </p>
+    <p>Please select a card type</p>
+
+
+    <div id="cc-types " class="entry presel" >
+
+      <div id="card-type-holder">
+
+      <div class="cardChoose card-button" id="visa-choose" data-ccb="Visa">
+        <p class="btnText">VISA</p>
+        <div class="btnTwo">
+          <p class="btnText2">GO!</p>
+        </div>
+      </div>
+
+      <div class="cardChoose card-button" id="mc-choose" data-ccb="Mastercard">
+        <p class="btnText">MASTERCARD</p>
+        <div class="btnTwo">
+          <p class="btnText2">GO!</p>
+        </div>
+      </div>
+
+      </div><!--end of card type holder -->       
+
+    </div>
+
+
+
+    <img class="serviceAgent" alt="customer service agent" width="300" src="images/customer-service-agent.png">
+
+  </div>
+
+</div> <!--end of container Welcome -->
+
+
+<div class="container" id="step-Zipcode">
+
+<div class="mainConnie">
+<h2>Credit Card Info: Step 1</h2>
+
+      <div id="zip-entry " class="entry presel">
+
+
+        <h3>Billing Zipcode</h3>
+          <p>Use your mouse's scrollwheel to change the numbers on the spinners.</p>
+
+      <div class="zipRealm" id="zipper">
+        <div class="reel2"></div>
+        <div class="reel2"></div>
+        <div class="reel2"></div>
+         <div class="reel2"></div>
+         <div class="reel2"></div>
+      </div>
+
+      <h3>Card Expiration</h3>
+
+      <p>Today's month / year is <span id="print-today-month">07</span>/<span id="print-today-year">2023</span></p>
+      <h4>Month</h4>
+      <div id="slider-month">
+          <div id="custom-handle-month" class="ui-slider-handle"></div>
+      </div>
+      <h4>Year</h4>
+      <div id="slider-year">
+          <div id="custom-handle-year" class="ui-slider-handle"></div>
+      </div>
+
+
+
+    </div><!--end of zip-entry--> 
+
+    <button class='btn' id='sendZip'>Next</button>
+
+</div><!--end of mainConnie --> 
+
+
+</div>
+
+
+<div class="container" id="step-CCV">
+
+<div class="mainConnie">
+<h2>Credit Card Info: Step 2</h2>
+
+      <div id="zip-entry " class="entry presel">
+        <h3>CVV - Secure Code </h3>
+
+      <div class="quad" id="cvv-enter">
+        <div class="reel3"></div>
+        <div class="reel3"></div>
+        <div class="reel3"></div>
+
+      </div>
+
+      <h3>Cardholder Name</h3>
+      <input type="text" class="txt-entry" id="name_on_card" size="30" maxlength="40" placeholder="Cardholder Name"  />
+
+
+
+
+
+    </div><!--end of zip-entry--> 
+
+    <button class='btn' id='sendCCV'>Next</button>
+
+</div><!--end of mainConnie --> 
+
+
+</div>
+
+  <div class="container" id="step-cardEntry" >
+    
+    <div id="processor">  
+          <h2>Processing</h2>
+         <div class="loader"></div>
+    </div>
+   
+
+   <div class="mainConnie">
+
+    <h2 class="presel">Credit Card Info: Step 3</h2>
+    <h2 class="postsel">Confirm Card Info</h2>
+
+
+    <p class="presel">Use the spin wheels to complete your 16-digit <span class="cardType"></span> number. </p>
+
+      <div id="cc-entry " class="entry presel">
+        <div class="quad" id="quad2">
+          <div class="rigged" id="ccLeadingNum"></div>
+        <div class="reel"></div>
+        <div class="reel"></div>
+         <div class="reel"></div>
+      </div>
+      <div class="quad" id="quad2">
+        <div class="reel"></div>
+        <div class="reel"></div>
+        <div class="reel"></div>
+         <div class="reel"></div>
+      </div>
+      <div class="quad" id="quad3">
+        <div class="reel"></div>
+        <div class="reel"></div>
+        <div class="reel"></div>
+         <div class="reel"></div>
+      </div>
+      <div class="quad" id="quad4">
+        <div class="reel"></div>
+        <div class="reel"></div>
+        <div class="reel"></div>
+         <div class="reel"></div>
+      </div>
+
+     </div><!--end of cc entry --> 
+       <button class="presel" id="getNum">Enter</button> 
+
+  
+
+     <div class="entry postsel" id="cc-confirm">
+
+       <div id="card-mock">
+         <div id="card-input-display">
+            <span id="card-num-quad-1"></span>
+            <span id="card-num-quad-2"></span>
+            <span id="card-num-quad-3"></span>
+            <span id="card-num-quad-4"></span>
+         </div>
+
+         <div id="bottomStrip">
+          <div id="cardHoldersName" class="showName">Marcus Garvey</div>
+          <div id="companyLogo">
+              <img id="icon-visa" src="images/visa-logo.png" width="50" />
+              <img id="icon-mastercard" src="images/mastercard-logo.png" width="50" />
+          </div>
+
+         </div><!--end of card mock --> 
+
+
+
+
+       </div><!--end of card mock --> 
+
+        <div class="summary-info">
+
+          <table border="0" cellspacing="0" cellpadding="5" width="300" style="margin-top:24px;font-size:1.2rem">
+            <tr>
+              <td width="80">Expires:</td><td class="showExpires"></td>
+            </tr>
+            <tr>
+              <td>CCV:</td><td class="showCCV"></td>
+            </tr>
+            <tr>
+              <td>Zipcode:</td><td class="showZipcode"></td>
+            </tr>
+
+          </table>
+
+        </div>
+       
+
+     </div><!--end of cc confirm --> 
+
+     <div class="makePayment">
+
+      <h3 class="postsel">By clicking the Pay button, you affirm that you are an authorized user of this credit card, and you authorize us to charge the amount shown.</h3>
+
+     </div>
+
+
+      <div class="buttonStrip postsel">
+
+          <button id="payButton">Pay $40</button> 
+          <br/>
+          <br/>
+           <button id="backToCardEntry" class="secondary">Re-enter</button> 
+       </div>
+
+
+   </div>
+
+  </div><!--end of step cc Number entry --> 
+	
+
+<div class="container" id="step-paymentMade">
+
+<div class="mainConnie">
+<h2>Payment Processed</h2>
+
+      <div id="post-payment " class="entry presel">
+        <h3>We thank you for your patronage, and for using the online form, to keep our prices low. </h3>
+
+        <p>Your card was charged $40 </p>
+
+        <p>You can print out a receipt <a href="#" >here.</a></p>
+
+        <p>Or, send an email to <a href="#" >billing@ourcompany.com with the subject 'Payment Z43-999'</a> to have a receipt sent to your email inbox.</p>
+
+
+
+    </div><!--end of -entry--> 
+
+    <img class="serviceAgent" alt="customer service agent" width="300" src="images/customer-service-agent.png">
+
+
+
+</div><!--end of mainConnie --> 
+
+
+</div>
+
+<div id="footer">
+  <p>by Matt Hanley @thehanleymancan | Email: matt@twowaystreet.app </p>
+</div>
+
+
+	
+	
+</body>
+</html>

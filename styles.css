@@ -1,0 +1,499 @@
+body {
+
+background-color: #b8c6db;
+background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+
+}
+
+div#disclaimer {
+  background-color: #eb4511;
+background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
+color:#fff;
+padding:10px;
+font-size:16px;
+}
+
+
+
+div.container {
+	margin:20px auto;
+	width:80%;
+	max-width:500px;
+	min-width:360px;
+  min-height:600px;
+
+background:#b8c6db url('images/lock.png') 10px 10px no-repeat;
+background-size: 40px 40px;
+padding:20px;
+display:none;
+text-align:center;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+div.mainConnie {
+	
+}
+
+div.container.swinger {
+  transform:rotate(-45deg);
+}
+
+div#step-Welcome {
+  height:680px;
+  overflow:hidden;
+}
+
+
+
+
+div.entry {
+  width:300px;
+  margin:10px auto;
+  text-align:center;
+  border:1px solid black;
+  padding:20px;
+  border-radius:30px; 
+  background:#fff;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.25);
+
+
+}
+
+div#cc-types {
+  height:260px;
+}
+
+.quad, .zipRealm{
+  height: 116px;
+  overflow: hidden;
+  margin:-22px auto;
+  transform:scale(.6); 
+  display:block; 
+}
+
+.zipRealm {
+
+  margin-left:-60px;
+  width:420px;
+}
+
+
+.reel,.reel2,.reel3,.rigged {
+  width: 70px;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  font-size: 35px;
+  line-height: 50px;
+}
+
+.rigged {
+  top:-45px; 
+  font-size:42px;
+}
+
+.quota, .quota div, .quota:before, .quota:after {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+}
+
+.quota {
+  top: 33px;
+  pointer-events: none;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+
+.reel:first-child .quota {
+  -webkit-perspective-origin: 120px 50%;
+  perspective-origin: 120px 50%;
+}
+
+.reel:last-child .quota {
+  -webkit-perspective-origin: -50px 50%;
+  perspective-origin: -50px 50%;
+}
+
+.quota div, .quota:before, .quota:after {
+  -webkit-transform-origin: inherit;
+  transform-origin: inherit;
+}
+
+.quota div {
+  left: 0;
+  background: url('images/elect.png');
+  background-size: 100% 100%;
+  border-left: 2px solid #2e363e;
+  border-right: 2px solid #2e363e;
+  outline: 1px solid transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: auto;
+}
+
+.rotate div {
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: inherit;
+  transition-duration: inherit;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.quota:before, .quota:after {
+  content: "";
+  left: 0;
+  z-index: 1;
+}
+
+.quota:before {
+  background: -webkit-linear-gradient(rgba(50,50,50,0.7) 10%, transparent);
+  background: linear-gradient(rgba(50,50,50,0.7) 10%, transparent);
+  -webkit-transform: rotateX(36deg);
+  transform: rotateX(36deg);
+}
+
+.quota:after {
+  background: -webkit-linear-gradient(transparent, rgba(50,50,50,0.7) 70%);
+  background: linear-gradient(transparent, rgba(50,50,50,0.7) 70%);
+  -webkit-transform: rotateX(-36deg);
+  transform: rotateX(-36deg);
+}
+
+.reel:first-child .quota:before {
+  -webkit-clip-path: polygon(3% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 0 100%, 0 30%);
+}
+
+.reel:first-child .quota:after {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 3% 100%, 0 70%);
+}
+
+.reel:last-child .quota:before {
+  -webkit-clip-path: polygon(0 0, 97% 0, 100% 30%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 97% 0, 100% 30%, 100% 100%, 0 100%);
+}
+
+.reel:last-child .quota:after {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 97% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 97% 100%, 0 100%);
+}
+
+
+/* card input .. */ 
+#card-mock {
+background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+width:90%;
+padding:8px;
+color:#fff;
+min-height:140px;
+position:relative;
+}
+
+#card-input-display {
+	margin-top:20%;
+	font-size:1.1rem;
+}
+
+#bottomStrip {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 14px;
+  width: 94%;
+}
+
+#card-mock #icon-mastercard {
+  display:none;
+}
+
+/*by default, visa icon displays.. change if given class .mastercard */ 
+#card-mock.mastercard #icon-visa {
+  display:none;
+}
+#card-mock.mastercard #icon-mastercard {
+  display:block;
+}
+
+/* end of card input */ 
+
+/* begin CHOOSE A CARD WELCOME */ 
+
+/*from Alvaro Trigo */ 
+#card-type-holder{
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  background: white;
+  padding: 10px;
+  width: 250px;
+  margin: 0 auto;
+  position: relative;
+/*  transform: translateY(-65%);*/
+
+}
+.card-button {
+  background: #3D4C53;
+  margin : 20px auto;
+  width : 200px;
+  height : 50px;
+  overflow: hidden;
+  text-align : center;
+  transition : .2s;
+  cursor : pointer;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+.card-button .btnTwo {
+  position : relative;
+  width : 200px;
+  height : 100px;
+  margin-top: -100px;
+  padding-top: 2px;
+  background : #26A69A;
+  left : -250px;
+  transition : .3s;
+}
+.btnText {
+  color : white;
+  transition : .3s;
+}
+.btnText2 {
+  margin-top : 63px;
+  margin-right : -130px;
+  color : #FFF;
+}
+.card-button:hover .btnTwo{ /*When hovering over .button change .btnTwo*/
+  left: -130px;
+}
+.card-button:hover .btnText{ /*When hovering over .button change .btnText*/
+  margin-left : 65px;
+}
+.card-button:active { /*Clicked and held*/
+  box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
+}
+
+/* end of Alvaro Trigo */ 
+
+div.cardChoose {
+  margin:30px auto;
+/* cursor:pointer;
+ width:150px;*/
+
+}
+
+
+
+/* END OF CHOOSE CARD / WELCOME */ 
+
+
+/* PAYMENT MADE */ 
+
+div#step-paymentMade {
+  height:660px;
+  overflow:hidden;
+}
+
+img.serviceAgent {
+  position: relative;
+  top: -32px;
+  left: 120px;
+
+}
+
+div#step-Welcome img.serviceAgent {
+  top:-80px;
+}
+
+
+
+
+/* END OF PAYMENT MADE */ 
+
+/* card name input */ 
+input#name_on_card {
+  line-height: 2;
+  font-family:"Arial";
+  font-size:14px;
+}
+
+
+
+
+
+/* some basic elements */ 
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 140px;
+  will-change: transform;
+}
+
+button.secondary {
+  background-color:#ccc;
+  color:#000;
+  font-size:14px;
+  min-height:50px;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+#footer {
+background-color: #f1dfd1;
+background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+text-align: center;
+box-sizing: border-box;
+padding:20px;
+margin-top:30px;
+
+}
+
+
+/* end of basic HTML elements */ 
+
+
+/* ajax loader */ 
+div#processor {
+  display:none;
+  width:80%;
+  margin:20% auto;
+  text-align: center;
+}
+
+.loader  {
+  animation: rotate 1s infinite;  
+  height: 50px;
+  width: 50px;
+  margin:20px auto;
+ 
+}
+
+#step-cardEntry.processing #processor {
+  display:block;
+}
+
+#step-cardEntry.processing .mainConnie {
+  display:none;
+}
+
+.loader:before,
+.loader:after {   
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 20px;  
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;  
+  background-color: #cb2025;
+  box-shadow: 30px 0 0 #f8b334;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite; 
+  background-color: #00a096;
+  box-shadow: 30px 0 0 #97bf0d;
+}
+
+@keyframes rotate {
+  0% { 
+    -webkit-transform: rotate(0deg) scale(0.8); 
+    -moz-transform: rotate(0deg) scale(0.8);
+  }
+  50% { 
+    -webkit-transform: rotate(360deg) scale(1.2); 
+    -moz-transform: rotate(360deg) scale(1.2);
+  }
+  100% { 
+    -webkit-transform: rotate(720deg) scale(0.8); 
+    -moz-transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #f8b334;
+  }
+  50% {
+    box-shadow: 0 0 0 #f8b334;
+    margin-bottom: 0;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #f8b334;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #97bf0d;
+  }
+  50% {
+    box-shadow: 0 0 0 #97bf0d;
+    margin-top: -20px;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #97bf0d;
+    margin-top: 0;
+  }
+}
+
+/* end of ajax loader */ 
